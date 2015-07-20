@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+<html>
+	<head>
+		{% block title %}
+		Application Form
+		{% endblock %}
+		<link rel="stylesheet" href="/static/css/styles.css"/> 
+	</head>
+	<body> 
+	{% block content %}
+		<h1>Careers at Ubermelon</h1>
+		<p>Apply to work at Ubermelon! We are always looking for sharp new talent to join our team. Please fill out the application form below with your name and select your dream job.</p>
+		<form action="/application" method="post">
+			<!-- First Name & Last Name -->
+			<label for="field-firstname" name="firstname">First Name: </label> 
+			<input type="text" name="firstname" id="field-firstname" placeholder="Type your first name here..." class="yellow">
+			<label for="field-lastname" name="lastname">Last Name:</label>
+			<input type="text" name="lastname" id="field-lastname" placeholder="Type your last name here..." class="yellow">
+			<!-- Salary Requirement -->
+			<label for="field-salary" name="salary"> Salary Requirement: </label>
+			<input type="text" name="salary" id="field-salary" class="yellow" placeholder="Please type your salary as a number">
+			<!-- Job Type Dropdown-->
+			Job you are applying for: 
+			<select name="job">
+				<option value="Software Engineer">Software Engineer</option>
+				<option value="QA Engineer">QA Engineer</option>
+				<option value="Product Manager">Product Manager</option>
+				<!-- Submit button -->
+				<input type="submit" class="yellow">
+			</select>
+		</form>
+	{% endblock %}
+	</body>
+</html>

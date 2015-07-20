@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+<html>
+<head>
+{% block title %}Thanks for Applying {% endblock %}
+<link rel="stylesheet" href="/static/css/styles.css"/> 
+</head>
+{% block content %}
+
+Thank you, {{ firstname }} {{ lastname }}, for applying to be a {{ job }}. <br> Your minimum salary requirement is {{ salary }} dollars.
+     
+{% endblock %}
+</html>
